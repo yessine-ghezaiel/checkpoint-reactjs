@@ -1,25 +1,36 @@
-import logo from './logo.svg';
+import react, { Component, component } from 'react';
 import './App.css';
+import {  Form, FormGroup, Label, Input } from 'reactstrap';
+import { Button } from 'react-bootstrap';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+
+class App extends Component {
+  render() {
+    return (
+      <Form className="registre-form">
+        <h1>
+          Welcome to yessine Checkpoint
+          <span className="font-weight-bold">React js</span>
+        </h1>
+        <FormGroup>
+          <Label>Name</Label>
+          <Input type="text" placeholder="Name"/>
+        </FormGroup>
+        <FormGroup>
+          <Label>Email</Label>
+          <Input type="email" placeholder="Email"/>
+        </FormGroup>
+        <FormGroup>
+          <Label>Password</Label>
+          <Input type="Paswword" placeholder="Enter your Password"/>
+        </FormGroup>
+        <Button className="btn-lg btn-dark btn-block">
+            Registre
+        </Button>
+      </Form>
+    );
+  }
 }
 
 export default App;
